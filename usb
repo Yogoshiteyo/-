@@ -1,0 +1,20 @@
+phy@01c13400 {
+			#phy-cells = <0x1>;
+			compatible = "allwinner,sun7i-a20-usb-phy";
+			reg = <0x1c13400 0x10 0x1c14800 0x4 0x1c1c800 0x4>;
+			reg-names = "phy_ctrl", "pmu1", "pmu2";
+			clocks = <0x2c 0x8>;
+			clock-names = "usb_phy";
+			resets = <0x2c 0x0 0x2c 0x1 0x2c 0x2>;
+			reset-names = "usb0_reset", "usb1_reset", "usb2_reset";
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <0x2d 0x2e>;
+			usb0_id_det-gpio = <0x26 0x7 0x4 0x0>;
+			usb0_vbus_det-gpio = <0x26 0x7 0x5 0x0>;
+			usb0_vbus-supply = <0x2f>;
+			usb1_vbus-supply = <0x30>;
+			usb2_vbus-supply = <0x31>;
+			linux,phandle = <0x2a>;
+			phandle = <0x2a>;
+		};
